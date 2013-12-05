@@ -23,12 +23,14 @@ Openerp Install w/ Vagrant
 5. With any luck, you should be able to go to localhost:8080 and see a fresh working install of openerp on a fresh database
 
 
+
+
 ## Thanks
 * thanks to this guy https://github.com/dreur for helping with the gunicorn/nginx/upstart basics
 
-## Future
+## TODO
 * show example with AWS provider
-
+* postfix - I don't have the install automated. Probably should be using something like puppet or saltstack for this stuff anyhow
 
 
 
