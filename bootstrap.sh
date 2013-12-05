@@ -39,6 +39,8 @@ echo "$SYSTEM_HOSTNAME" > /etc/hostname
 # update host file
 sed -i "s/\([^-]\)localhost/\1$SYSTEM_HOSTNAME/" /etc/hosts
 
+hostname openerp
+
 ##################################################################################
 #  Create groups and users
 ##################################################################################
