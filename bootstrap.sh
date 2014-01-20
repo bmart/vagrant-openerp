@@ -46,7 +46,7 @@ hostname openerp
 ##################################################################################
 
 groupadd developers
-useradd   -d $OPENERP_HOME -G developers openerp
+useradd   -d $OPENERP_HOME -G developers -m -s /bin/bash openerp
 
 ##################################################################################
 #  Update Apt and install necessary packages for OpenERP, Postgresql, Shell and Vim
@@ -79,7 +79,7 @@ ln -s /usr/lib/i386-linux-gnu/libz.so /usr/lib
 #  PIP/VirtualEnv Setup
 ##################################################################################
 
-easy_install pip
+apt-get install python-pip
 pip install virtualenv
 pip install virtualenvwrapper
 
