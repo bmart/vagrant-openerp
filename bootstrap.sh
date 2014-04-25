@@ -37,7 +37,8 @@ dpkg-reconfigure locales
 
 echo "$SYSTEM_HOSTNAME" > /etc/hostname
 # update host file
-sed -i "s/\([^-]\)localhost/\1$SYSTEM_HOSTNAME/" /etc/hosts
+# sed -i "s/\([^-]\)localhost/\1$SYSTEM_HOSTNAME/" /etc/hosts
+echo "127.0.0.1 $SYSTEM_HOSTNAME" >> /etc/hosts
 
 hostname openerp
 
