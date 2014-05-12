@@ -7,12 +7,15 @@ Vagrant.configure("2") do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "precise32"
-  config.vm.box_url = "http://files.vagrantup.com/precise32.box"
+  
+  config.vm.box = "likwid/trusty64"
+  
 
   config.vm.provision :shell, :path => "bootstrap.sh"
   config.vm.network :forwarded_port, host: 8080, guest: 80
   config.vm.network :forwarded_port, host: 8069, guest: 8069
+  
+  # Only needed if you want to browse DB from pgadmin or some other pg tool
   config.vm.network :forwarded_port, host: 4321, guest: 5432
 
   # Already done by Vagrant, let's just do a symlink in vagrant
