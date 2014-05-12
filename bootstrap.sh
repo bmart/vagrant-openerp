@@ -54,7 +54,7 @@ useradd   -d $OPENERP_HOME -G developers -m -s /bin/bash openerp
 ##################################################################################
 
 apt-get install -y python-setuptools python-dev build-essential python-ldap
-apt-get install -y  postgresql-9.1
+apt-get install -y  postgresql-9.3
 apt-get install  -y postgresql-server-dev-all
 #apt-get install   -y postfix - needs to be hands free - currently its not
 apt-get install -y  libxml2
