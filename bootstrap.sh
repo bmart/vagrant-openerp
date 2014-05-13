@@ -146,10 +146,10 @@ chmod -R 775 $OPENERP_HOME
 #  Postgres config hacks and user setup
 ##################################################################################
 
-cat >> /etc/postgresql/9.1/main/pg_hba.conf <<EOF
+cat >> /etc/postgresql/9.3/main/pg_hba.conf <<EOF
 local   all             openerp                                 trust
 EOF
-echo "listen_addresses = '*'" >> /etc/postgresql/9.1/main/postgresql.conf
+echo "listen_addresses = '*'" >> /etc/postgresql/9.3/main/postgresql.conf
 
 # postgres permissions for openerp user
 sudo -u postgres createuser --createdb --no-createrole --no-superuser openerp
